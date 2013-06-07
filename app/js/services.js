@@ -11,8 +11,20 @@ var app = angular.module('tweed.services', []).value('version', '0.1');
 app.factory('Text', [function() {
   var Text = {};
 
-  Text.original = 'Your text goes here...';
-  Text.edited = Text.original;
+  Text.setText = function TextSetText(text) {
+    Text.original = text;
+    Text.edited = Text.chop(text);
+  }
+
+  Text.chop = function(text) {
+    return text.split(' ');
+  }
+
+  Text.unchop = function(chopped) {
+    return chopped.join(' ');
+  }
+
+  Text.setText('Your text goes here...');
 
   return Text;
 }]);
