@@ -2,10 +2,20 @@
 
 /* Controllers */
 
-angular.module('tweed.controllers', []).
-  controller('MyCtrl1', [function() {
+var app = angular.module('tweed.controllers', []);
 
-  }])
-  .controller('MyCtrl2', [function() {
+function Proofer($scope, Text) {
+  $scope.Text = Text;
 
-  }]);
+  $scope.next = function() {
+
+  }
+
+  $scope.prev = function() {
+
+  }
+}
+
+function Editor($scope, Text) {
+  $scope.Text = Text;
+}
