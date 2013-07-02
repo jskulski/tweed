@@ -5,7 +5,7 @@
 describe('service', function() {
 
   var scope;
-  var defaultText = 'This is my text and this is how I expect it to work.';
+  var defaultText = '0 1 2 3 4 5 6 7 8 9. 00 11 22 33 44 55 66 77 88 99. 111 222 333 444 555 666 777 888 999.';
   var defaultChop = defaultText.split(' ');
 
   beforeEach(module('tweed.services'));
@@ -51,20 +51,20 @@ describe('service', function() {
       });
       whole = parts.join(' ');
 
-      expect(Text.original).toEqual(whole);
+      expect(Text.saved).toEqual(whole);
     }))
 
     it('should give me the current phrase', inject(function(Text) {
       var text = '';
       text = Text.current().join(' ');
-      expect(text).toEqual('This is my text and this');
+      expect(text).toEqual('0 1 2 3 4 5');
     }))
 
     it('should scroll and give me the next phase', inject(function(Text) {
       var text = '';
       Text.next();
       text = Text.current().join(' ');
-      expect(text).toEqual('how I expect it to work.');
+      expect(text).toEqual('7 8 9. 00 11 22');
       expect(Text.cursor).toBe(1);
     }));
 

@@ -9,6 +9,3 @@ app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/edit', {templateUrl: 'partials/edit.html', controller: Editor});
   $routeProvider.otherwise({redirectTo: '/proof'});
 }]);
-debugger;
-
-console.log(app);
