@@ -12,13 +12,14 @@ app.factory('Text', [function() {
 
   var Text = {};
 
-  Text.original = '';
+  Text.inEditor = '';
+  Text.saved = '';
   Text.chopped = [];
   Text.cursor = 0;
 
   Text.setText = function TextSetText(text) {
     Text.cursor = 0;
-    Text.original = text;
+    Text.saved = text;
     Text.chopped = text.split(' ');
     Text.chopMap = Text.createChopMap(Text.chopped);
   }

@@ -1,8 +1,11 @@
 <div ng-controller="Editor">
-  <textarea ng-click="save()"></textarea>
+  <textarea ng-model="Text.inEditor"></textarea>
+  <button ng-click="save()">Save</button>
 
   <hr>
   <!-- DEBUG -->
   <em>In Loving Memory</em>
-  <div ng-model="Text.original"></div>
+
+  <h5>Text</h5>
+  <div>{{Text}}</div>
 </div>
