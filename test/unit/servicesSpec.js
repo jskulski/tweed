@@ -22,6 +22,11 @@ describe('service', function() {
       Text.setText(defaultText);
     }));
 
+    it('should handle empty string appropriately', inject(function(Text) {
+      Text.setText('');
+      Text.current();
+    }));
+
     it('should chop up as expected', inject(function(Text) {
       expect(Text.chopped).toEqual(defaultChop);
     }));

@@ -38,6 +38,8 @@
 
 <body>
 
+  <!-- Header
+  ================================================== -->
   <div class="container">
     <h1>Tweed helps you proof read.</h1>
 
@@ -45,8 +47,22 @@
       <li><a href="#/proof">Proof</a></li>
       <li><a href="#/edit">Edit</a></li>
     </ul>
+  </div>
 
+  <!-- Workzone
+  ================================================== -->
+  <hr>
+  <div class="container">
     <div ng-view></div>
+  </div>
+  <hr>
+
+  <!-- DEBUG -->
+  <div ng-controller="Editor" class="container">
+    <em>In Loving Memory</em>
+
+    <h5>Text</h5>
+    <div>{{Text}}</div>
   </div>
 
   <!-- In production use:
