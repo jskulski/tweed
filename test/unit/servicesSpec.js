@@ -46,7 +46,7 @@ describe('service', function() {
       var map = Text.chopMap;
 
       map.forEach(function(range) {
-        part = chopped.slice(range.start, range.end + 1);
+        part = chopped.slice(range.start, range.end);
         parts.push(part.join(' '));
       });
       whole = parts.join(' ');
@@ -57,14 +57,14 @@ describe('service', function() {
     it('should give me the current phrase', inject(function(Text) {
       var text = '';
       text = Text.current().join(' ');
-      expect(text).toEqual('0 1 2 3 4 5');
+      expect(text).toEqual('0 1 2 3 4 5 6');
     }))
 
     it('should scroll and give me the next phase', inject(function(Text) {
       var text = '';
       Text.next();
       text = Text.current().join(' ');
-      expect(text).toEqual('7 8 9. 00 11 22');
+      expect(text).toEqual('7 8 9. 00 11 22 33');
       expect(Text.cursor).toBe(1);
     }));
 

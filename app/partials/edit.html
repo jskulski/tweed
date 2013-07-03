@@ -1,4 +1,6 @@
-<div ng-controller="Editor">
-  <textarea ng-model="Text.inEditor"></textarea>
+<div ng-controller="Editor" ng-init="Text.inEditor = lorem()">
+  <div class="sixteen columns">
+    <textarea ng-model="Text.inEditor" id="editor" class="full"></textarea>
+  </div>
   <button ng-click="save()">Save</button>
 </div>

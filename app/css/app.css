@@ -19,3 +19,22 @@
   content: "";
   padding: 0;
 }
+
+/** Generic **/
+.full {
+  width: 100%;
+}
+
+/** Editor **/
+#editor {
+  height: 450px;
+}
+
+.word {
+  padding: 20px;
+  margin: 20px;
+}
+.word:first-child {
+  padding-left: 0px;
+  margin-left: 0px;
+}

@@ -41,7 +41,7 @@ app.factory('Text', [function() {
 
       // When its full, empty bucket and add that range to the bucket
       if (bucket.length > bucketSize) {
-        map.push({start: last, end: index})
+        map.push({start: last, end: index + 1})
         bucket = [];
         last = index + 1;
       }
